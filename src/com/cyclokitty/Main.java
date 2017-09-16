@@ -28,7 +28,12 @@ public class Main {
                 System.out.println("You got it!");
                 break;
             } else {
-                System.out.print("Try again.");
+                if (playerGuess > answer) {
+                    System.out.print("Your guess is too high. ");
+                } else if (playerGuess < answer) {
+                    System.out.print("Your guess is too low. ");
+                }
+                System.out.print("Try again. ");
             }
         }
     }
